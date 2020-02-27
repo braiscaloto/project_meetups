@@ -1,0 +1,49 @@
+.event-list {
+  flex-direction: column;
+  padding: var(--space-md);
+  overflow: auto;
+  margin-bottom: 4rem;
+}
+
+.event-item {
+  padding: 15px 0;
+  cursor: pointer;
+  height: 100px;
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--bright);
+}
+
+.event-item.selected {
+  border-bottom: 0.5rem solid var(--secondary);
+  background: var(--primary);
+  color: var(--dark);
+}
+
+.event-item .container {
+  display: flex;
+}
+
+.event-item .date {
+  font-family: var(--font-secondary);
+  position: relative;
+  top: 5px;
+  color: var(--medium);
+}
+
+.event-item.selected .date {
+  color: var(--dark);
+}
+
+.event-item.selected .title {
+  color: var(--dark);
+}
+
+.event-item .description {
+  margin: 10px 0;
+  color: var(--medium);
+  font-size: var(--font-xs);
+}
+
+.event-item.selected .description {
+  color: var(--dark);
+}

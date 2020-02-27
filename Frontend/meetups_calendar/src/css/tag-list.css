@@ -1,0 +1,19 @@
+.tag-list {
+  background: var(--primary);
+}
+
+.tag-list li {
+  color: var(--dark);
+  padding: var(--space-sm);
+}
+
+.tag-list li.selected {
+  background-color: var(--dark);
+  color: var(--bright);
+}
+
+.tag-list-item {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: inherit;
+}
