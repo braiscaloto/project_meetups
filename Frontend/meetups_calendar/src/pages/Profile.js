@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import jwt_decode from 'jwt-decode';
+import { AvatarContainer } from '../components/AvatarContainer';
 
 export function Profile() {
   const user = JSON.parse(localStorage.getItem('currentUser'));
@@ -11,12 +11,10 @@ export function Profile() {
         <Link className='btn' to={`/`}>
           GO CALENDAR
         </Link>
-        <h1 className='titleProfile'>{user.name}</h1>
+
+        <AvatarContainer id={user.userId} />
 
         <div className='avatarContainer'>
-          {user.avatarUrl !== null && (
-            <img className='avatarProfile' src={user.avatarUrl} />
-          )}
           {user.avatarUrl === null && (
             <img
               className='avatarProfile'
