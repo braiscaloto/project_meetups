@@ -24,3 +24,7 @@ export function updateAvatar(avatar) {
     avatar
   );
 }
+
+export function getProfile(id) {
+  return axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/accounts/${id}`);
+}
