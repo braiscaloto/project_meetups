@@ -25,7 +25,7 @@ export function Register() {
 
   return (
     <main className='centered-container'>
-      <h3>Create your acount</h3>
+      <h3>Create your account</h3>
       <form onSubmit={handleSubmit(handleRegister)} noValidate>
         <div
           className={`form-control ${

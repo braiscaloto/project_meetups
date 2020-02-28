@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 
 export function Profile() {
-  const storedUser = JSON.parse(localStorage.getItem('currentUser'));
-
-  const user = jwt_decode(storedUser);
+  const user = JSON.parse(localStorage.getItem('currentUser'));
 
   return (
     <React.Fragment>
@@ -16,7 +14,7 @@ export function Profile() {
         <h1 className='titleProfile'>{user.name}</h1>
 
         <div className='avatarContainer'>
-          <img className='avatarProfile' src={user.avatar_url} />
+          <img className='avatarProfile' src={user.avatarUrl} />
         </div>
         <Link className='btn' to={`/update/${user.userId}`}>
           Update Profile
