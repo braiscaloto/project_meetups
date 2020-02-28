@@ -15,6 +15,7 @@
 @import "./uploadForm.css";
 @import "./profile.css";
 @import "./updateAccount.css";
+@import "./headboard.css";
 
 html {
   box-sizing: border-box;

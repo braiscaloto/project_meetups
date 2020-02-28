@@ -9,9 +9,11 @@ import { AddEvent } from "./pages/AddEvent";
 import { Cards } from "./pages/Cards";
 import { GetEvent } from "./pages/GetEvent";
 import { Calendar } from "./pages/Calendar";
+import { CalendarPrivate } from "./pages/CalendarPrivate";
 import { Profile } from "./pages/Profile";
 import { UserUpdate } from "./pages/UserUpdate";
 import { DeleteAccount } from "./pages/Delete";
+import { Headboard } from "./pages/Headboard";
 
 function App() {
   return (
@@ -19,10 +21,16 @@ function App() {
       <AuthProvider>
         <Switch>
           <Route exact path="/">
+            <Headboard />
+          </Route>
+          <Route path="/calendar">
             <Calendar />
           </Route>
           <PrivateRoute path="/home">
             <Dashboard />
+          </PrivateRoute>
+          <PrivateRoute path="/calendarPrivate">
+            <CalendarPrivate />
           </PrivateRoute>
           <Route path="/cards">
             <Cards />
