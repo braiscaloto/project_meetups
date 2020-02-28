@@ -21,7 +21,6 @@
   border-radius: 8rem;
   min-height: 200px;
   min-width: 200px;
-  padding: 1rem;
 }
 .contactProfile {
   align-items: center;
@@ -32,6 +31,7 @@
 .emailProfile {
   text-align: center;
   font-size: 1rem;
+  padding: 1rem;
 }
 .updateProfile {
   align-items: center;
@@ -60,4 +60,7 @@
   border: none;
   color: white;
   font-family: Righteous;
+}
+.contactProfile {
+  padding: 1rem;
 }

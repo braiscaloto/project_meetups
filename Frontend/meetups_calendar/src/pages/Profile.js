@@ -14,14 +14,6 @@ export function Profile() {
 
         <AvatarContainer id={user.userId} />
 
-        <div className='avatarContainer'>
-          {user.avatarUrl === null && (
-            <img
-              className='avatarProfile'
-              src={require('../images/default-avatar.png')}
-            />
-          )}
-        </div>
         <Link className='btn' to={`/update/${user.userId}`}>
           Update Profile
         </Link>
