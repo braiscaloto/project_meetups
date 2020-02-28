@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
-@import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css';
-video {
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+@import "~@fullcalendar/core/main.css";
+@import "~@fullcalendar/daygrid/main.css";
+/* video {
   object-fit: cover;
   width: 100vw;
   height: 100vh;
@@ -56,8 +56,8 @@ h1 span {
   align-items: center;
   font-size: 10vw;
   margin-top: 5px;
-}
-#transition {
+} */
+/* #transition {
   background: #0000ff7c;
   position: absolute;
   padding: 0;
@@ -73,7 +73,7 @@ h1 span {
   top: 0;
   left: 0;
   top: -100vh;
-}
+} */
 
 .header-calendar {
   display: flex;
