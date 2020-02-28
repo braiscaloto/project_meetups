@@ -14,7 +14,15 @@ export function Profile() {
         <h1 className='titleProfile'>{user.name}</h1>
 
         <div className='avatarContainer'>
-          <img className='avatarProfile' src={user.avatarUrl} />
+          {user.avatarUrl !== null && (
+            <img className='avatarProfile' src={user.avatarUrl} />
+          )}
+          {user.avatarUrl === null && (
+            <img
+              className='avatarProfile'
+              src={require('../images/default-avatar.png')}
+            />
+          )}
         </div>
         <Link className='btn' to={`/update/${user.userId}`}>
           Update Profile

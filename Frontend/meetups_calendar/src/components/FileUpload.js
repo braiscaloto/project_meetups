@@ -1,47 +1,39 @@
 import React, { useState, useRef } from 'react';
 import { updateAvatar } from '../http/userService';
-import { useAuth } from '../context/auth-context';
+import { useHistory } from 'react-router-dom';
 
-export default function FileUpload() {
+export function FileUpload() {
   const [file, setFile] = useState();
-  const fileInput = useRef();
-  const { currentUser } = useAuth();
+  const history = useHistory();
 
-  const handleChange = e => {
-    setFile(e.target.files);
-  };
-
-  const handleUpload = () => {
-    if (!file) {
-      return;
-    }
-
-    const data = new FormData();
-    data.append('avatar', file[0]);
-
-    updateAvatar(data).then(response => {
-      /*return {
-        avatarUrl: response.headers.location
-      };*/
+  const handleFormSubmit = e => {
+    e.preventDefault();
+    avatarUpload(file).then(response => {
+      console.log(response.data);
+      history.push('/');
+      history.push('/profile');
     });
   };
 
-  return (
-    <nav>
-      <form className='uploadAvatarForm'>
-        <h2 className='titleAvatar'>Change your avatar</h2>
-        <input
-          ref={fileInput}
-          className='uploadForm'
-          type='file'
-          onChange={handleChange}
-        />
+  const handleChange = e => {
+    setFile({ file: e.target.files[0] });
+  };
 
-        <button className='button-upload' type='button' onClick={handleUpload}>
-          Upload
-        </button>
-        <h3 className='restartTitle'>Restart session to apply changes</h3>
-      </form>
-    </nav>
+  const avatarUpload = file => {
+    const formData = new FormData();
+    formData.append('avatar', file.file);
+    return updateAvatar(formData);
+  };
+
+  return (
+    <form className='uploadAvatarForm' onSubmit={handleFormSubmit}>
+      <h4>Change your avatar:</h4>
+      <input type='file' onChange={handleChange} />
+      <button type='submit' className='primary'>
+        Update
+      </button>
+    </form>
   );
 }
+
+export default FileUpload;
