@@ -21,14 +21,8 @@ export function Login() {
   const handleLogin = formData => {
     return signIn(formData)
       .then(response => {
-        localStorage.setItem(
-          'currentUser',
-          JSON.stringify(response.data.accessToken)
-        );
-
         setIsAuthenticated(true);
         setCurrentUser(response.data);
-        const id = response.data.userId;
 
         history.push(`/`);
       })

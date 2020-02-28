@@ -1,24 +1,24 @@
-import React, { useEffect, useReducer } from "react";
-import myVideo from "../video/loop.mp4";
-import { getAllEvents } from "../http/eventsService";
-import { EventsCalendar } from "../components/EventsCalendar";
-import { useHistory, Link } from "react-router-dom";
+import React, { useEffect, useReducer } from 'react';
+import myVideo from '../video/loop.mp4';
+import { getAllEvents } from '../http/eventsService';
+import { EventsCalendar } from '../components/EventsCalendar';
+import { useHistory, Link } from 'react-router-dom';
 
 function formatDate(date) {
   var d = new Date(date),
-    month = "" + (d.getMonth() + 1),
-    day = "" + d.getDate(),
+    month = '' + (d.getMonth() + 1),
+    day = '' + d.getDate(),
     year = d.getFullYear();
 
-  if (month.length < 2) month = "0" + month;
-  if (day.length < 2) day = "0" + day;
+  if (month.length < 2) month = '0' + month;
+  if (day.length < 2) day = '0' + day;
 
-  return [year, month, day].join("-");
+  return [year, month, day].join('-');
 }
 
 function eventsReducer(state, action) {
   switch (action.type) {
-    case "GET_EVENTS_SUCCESS":
+    case 'GET_EVENTS_SUCCESS':
       return {
         ...state,
         events: action.initialEvents.map(n => ({
@@ -26,7 +26,7 @@ function eventsReducer(state, action) {
           date: formatDate(n.event_at)
         }))
       };
-    case "SELECT_EVENT":
+    case 'SELECT_EVENT':
       return { ...state, selectedEvent: action.index };
     default:
       return state;
@@ -44,7 +44,7 @@ export function Calendar() {
   useEffect(() => {
     getAllEvents().then(response =>
       dispatch({
-        type: "GET_EVENTS_SUCCESS",
+        type: 'GET_EVENTS_SUCCESS',
         initialEvents: response.data.data
       })
     );
@@ -54,34 +54,34 @@ export function Calendar() {
     <React.Fragment>
       <main>
         <video autoPlay loop muted>
-          <source src={myVideo} type="video/mp4"></source>
+          <source src={myVideo} type='video/mp4'></source>
         </video>
-        <header className="viewport-header">
+        <header className='viewport-header'>
           <h1>
             <span>meetech</span>
           </h1>
         </header>
-        <div id="transition">
+        <div id='transition'>
           <h1>meetech</h1>
-          <div className="header-calendar">
-            <Link className="btn" to={`/profile`}>
+          <div className='header-calendar'>
+            <Link className='btn' to={`/profile`}>
               Profile
             </Link>
-            <Link className="btn" to={`/home`}>
+            <Link className='btn' to={`/home`}>
               Events
             </Link>
-            <Link className="btn" to={`/add-event`}>
+            <Link className='btn' to={`/add-event`}>
               Add events
             </Link>
 
-            <Link to="/register" className="btn">
-              SignUp
+            <Link to='/register' className='btn'>
+              Sign Up
             </Link>
-            <Link to="/login" className="btn">
-              SignIn
+            <Link to='/login' className='btn'>
+              Sign In
             </Link>
           </div>
-          <article id="calendar-transition">
+          <article id='calendar-transition'>
             {state.events.length > 0 && (
               <EventsCalendar defaultEvents={state.events} />
             )}

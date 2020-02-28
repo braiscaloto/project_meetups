@@ -17,3 +17,10 @@ export function uploadAvatar(data) {
       return res;
     });
 }
+
+export function updateAvatar(avatar) {
+  return axios.put(
+    `${process.env.REACT_APP_BACKEND_URL}/api/users/avatar`,
+    avatar
+  );
+}

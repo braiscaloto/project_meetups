@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { uploadAvatar } from '../http/userService';
+import { updateAvatar } from '../http/userService';
 import { useAuth } from '../context/auth-context';
 
 export default function FileUpload() {
@@ -19,7 +19,7 @@ export default function FileUpload() {
     const data = new FormData();
     data.append('avatar', file[0]);
 
-    uploadAvatar(data).then(response => {
+    updateAvatar(data).then(response => {
       /*return {
         avatarUrl: response.headers.location
       };*/
@@ -38,7 +38,7 @@ export default function FileUpload() {
         />
 
         <button className='button-upload' type='button' onClick={handleUpload}>
-          Up!
+          Upload
         </button>
         <h3 className='restartTitle'>Restart session to apply changes</h3>
       </form>
