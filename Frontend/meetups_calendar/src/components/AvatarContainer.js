@@ -24,8 +24,16 @@ export function AvatarContainer({ id }) {
       <div className='titleProfile'>
         <h2>{profile.name}</h2>
       </div>
+      <div>
+        {profile.avatar_url === null && (
+          <img
+            className='avatarProfile'
+            src={require('../images/default-avatar.png')}
+          />
+        )}
+      </div>
       <div className='avatarContainer'>
-        {<img alt='Foto de avatar' src={profile.avatar_url} /> || 'Loading...'}
+        {<img className='avatarProfile' src={profile.avatar_url} />}
       </div>
     </div>
   );
