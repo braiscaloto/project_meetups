@@ -8,7 +8,7 @@ export function Profile() {
   return (
     <React.Fragment>
       <main className='profile'>
-        <Link className='btn' to={`/`}>
+        <Link className='btn' to={`/CalendarPrivate`}>
           GO CALENDAR
         </Link>
 

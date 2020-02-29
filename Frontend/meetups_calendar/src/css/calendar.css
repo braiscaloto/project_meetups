@@ -1,23 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
 @import "~@fullcalendar/core/main.css";
 @import "~@fullcalendar/daygrid/main.css";
-.calendar-parent {
-  width: 100% !important;
-  height: 100vh !important;
-}
-.fc-view-container {
-  position: relative;
-  width: 100% !important;
-}
-.fc table {
-  width: 100%;
-  box-sizing: border-box;
-  table-layout: fixed;
-  border-collapse: collapse;
-  border-spacing: 0;
-  font-size: 1em;
-}
-
 .fc-unthemed td.fc-today {
   opacity: 0.1 !important;
 }
@@ -28,6 +11,7 @@
   border-radius: 30px !important;
   border: 1px solid var(--primary) !important;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 .header {
   display: flex;
@@ -40,6 +24,11 @@
   direction: ltr !important;
   text-align: center !important;
 >>>>>>> afcc966e89f96aaf76c15574f161c7d059f2e33d
+=======
+.fc {
+  direction: ltr !important;
+  text-align: center !important;
+>>>>>>> f6921e50874263e61bd85b29778d0deaa7ddec99
 }
 .fc-button-primary:disabled {
   background-color: transparent !important;

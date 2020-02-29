@@ -8,8 +8,29 @@
   max-height: 50px;
   max-width: 50px;
 }
-<<<<<<< HEAD
-=======
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: var(--space-md);
+}
+
+.header h1 {
+  font-family: var(--font-special);
+  font-size: var(--font-l);
+}
+
+.header-item {
+  flex-grow: 1;
+}
+
+.header-item.centered {
+  text-align: center;
+}
+
+.header-item.right {
+  text-align: right;
+}
 
 .header-tag {
   font-family: var(--font-secondary);
@@ -25,4 +46,3 @@
 #tags-toggle {
   border-bottom: none;
 }
->>>>>>> afcc966e89f96aaf76c15574f161c7d059f2e33d
