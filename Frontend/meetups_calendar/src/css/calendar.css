@@ -55,3 +55,14 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.logo-private {
+  padding: 20px 0 0 30px;
+}
+.logo-calendar h1 {
+  font-family: var(--font-primary);
+  color: var(--primary);
+  border: none;
+  font-family: var(--font-primary);
+  color: var(--primary);
+}

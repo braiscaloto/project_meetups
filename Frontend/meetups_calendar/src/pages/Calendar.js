@@ -54,11 +54,9 @@ export function Calendar() {
     <React.Fragment>
       <header>
         <article className="header-calendar1">
-          <h1>
-            <a id="return" href="/">
-              meetech
-            </a>
-          </h1>
+          <Link to="/">
+            <h1 className="logo-calendar">meetech</h1>
+          </Link>
         </article>
         <div className="header-calendar2">
           <Link to="/register" className="btn">
