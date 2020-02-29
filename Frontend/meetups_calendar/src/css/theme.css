@@ -5,8 +5,8 @@
   --primary: #c86818;
   --secondary: #f8c51d;
   --separator: #1b1b1b;
-  --medium: #999999;
-  --dark: linear-gradient(90deg, #4857d8 0%, #2f3fd2 95%, #25145d 5%);
+  --medium: #9999996d;
+  --dark: linear-gradient(to left, #25145d 5%, #2f3fd2 95%);
   --bright: #fff;
   --ko: #e92119;
   --ok: #3c8c20;

@@ -1,14 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+
+import React from "react";
+import { Link } from "react-router-dom";
 import { AvatarContainer } from '../components/AvatarContainer';
 
+
 export function Profile() {
-  const user = JSON.parse(localStorage.getItem('currentUser'));
+  const user = JSON.parse(localStorage.getItem("currentUser"));
 
   return (
     <React.Fragment>
       <main className='profile'>
-        <Link className='btn' to={`/calendar`}>
+        <Link className='btn' to={`/CalendarPrivate`}>
           GO CALENDAR
         </Link>
 
@@ -21,12 +23,12 @@ export function Profile() {
           <p className='emailProfile'>Email: {user.email}</p>
         </div>
 
-        <Link className='btn' to='/'>
+        <Link className="btn" to="/">
           <button
-            className='logoutButton'
+            className="logoutButton"
             onClick={() => {
               localStorage.clear();
-              window.location.href = '/';
+              window.location.href = "/";
             }}
           >
             LOGOUT

@@ -10,6 +10,8 @@ export function EventsCalendar(defaultEvents = {}) {
       <FullCalendar
         defaultView="dayGridMonth"
         plugins={[dayGridPlugin]}
+        height="parent"
+        navlinks="true"
         events={defaultEvents.defaultEvents}
       />
     </React.Fragment>

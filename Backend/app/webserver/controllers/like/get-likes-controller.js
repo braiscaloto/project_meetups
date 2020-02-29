@@ -15,10 +15,7 @@ async function getLikes(req, res, next) {
 
     const likes = rows.map(like => {
       return {
-        ...like,
-        createdAt: like.created_at,
-        user_id: undefined,
-        created_at: undefined
+        ...like
       };
     });
 
