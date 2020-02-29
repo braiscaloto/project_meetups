@@ -64,7 +64,7 @@ export function CalendarPrivate() {
             Add events
           </Link>
         </div>
-        <article id="calendar-transition">
+        <article className="calendar">
           {state.events.length > 0 && (
             <EventsCalendar defaultEvents={state.events} />
           )}

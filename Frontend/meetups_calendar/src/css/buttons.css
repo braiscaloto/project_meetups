@@ -13,6 +13,19 @@
   border-radius: 30px;
   border: 2px solid;
 }
+.btn-like {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  background: transparent;
+
+  color: var(--bright);
+  width: fit-content;
+  cursor: pointer;
+
+  border: none;
+  display: flex;
+  margin: 10px;
+}
 
 .btn:hover {
   background: var(--bright);

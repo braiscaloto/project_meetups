@@ -52,9 +52,15 @@ export function Calendar() {
 
   return (
     <React.Fragment>
-      <main>
-        <h1>meetech</h1>
-        <div className="header-calendar">
+      <header>
+        <article className="header-calendar1">
+          <h1>
+            <a id="return" href="/">
+              meetech
+            </a>
+          </h1>
+        </article>
+        <div className="header-calendar2">
           <Link to="/register" className="btn">
             Sign Up
           </Link>
@@ -62,7 +68,9 @@ export function Calendar() {
             Sign In
           </Link>
         </div>
-        <article id="calendar-transition">
+      </header>
+      <main>
+        <article className="calendar">
           {state.events.length > 0 && (
             <EventsCalendar defaultEvents={state.events} />
           )}

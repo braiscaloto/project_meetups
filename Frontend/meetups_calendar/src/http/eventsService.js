@@ -56,8 +56,21 @@ export function getAttendees(event_id) {
   );
 }
 
+export function addLike(event_id, data) {
+  return axios.post(
+    `${process.env.REACT_APP_BACKEND_URL}/api/events/${event_id}/likes`,
+    data
+  );
+}
+
 export function getLikes(event_id) {
   return axios.get(
     `${process.env.REACT_APP_BACKEND_URL}/api/likes/${event_id}/likes`
+  );
+}
+
+export function deleteLike(event_id) {
+  return axios.delete(
+    `${process.env.REACT_APP_BACKEND_URL}/api/events/${event_id}/likes`
   );
 }
