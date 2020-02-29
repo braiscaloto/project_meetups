@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 export function Header({ title, user, onMenuOpenedChange, onLogout }) {
   const isMobile = useMatchMedia('(max-width:576px)');
-  //Aquí hice cambios en el Link salir, para que haga logout y te lleve al calendar publico
   return (
     <header className='header'>
       {!isMobile && <p className='header-name'>{user}</p>}
