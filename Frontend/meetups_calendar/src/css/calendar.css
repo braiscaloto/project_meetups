@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
 @import "~@fullcalendar/core/main.css";
 @import "~@fullcalendar/daygrid/main.css";
-.calendar-parent {
+
+/* .calendar-parent {
   width: 100% !important;
   height: 100vh !important;
 }
@@ -16,7 +17,7 @@
   border-collapse: collapse;
   border-spacing: 0;
   font-size: 1em;
-}
+} */
 
 .fc-unthemed td.fc-today {
   opacity: 0.1 !important;
@@ -58,11 +59,18 @@
 
 .logo-private {
   padding: 20px 0 0 30px;
+  text-transform: lowercase;
 }
-.logo-calendar h1 {
+.logo-calendar {
   font-family: var(--font-primary);
   color: var(--primary);
   border: none;
   font-family: var(--font-primary);
   color: var(--primary);
+  text-transform: lowercase;
+}
+#meetech {
+  border: none;
+  border-collapse: unset;
+  width: fit-content;
 }

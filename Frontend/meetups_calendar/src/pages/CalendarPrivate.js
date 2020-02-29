@@ -52,7 +52,7 @@ export function CalendarPrivate() {
   return (
     <React.Fragment>
       {" "}
-      <Link to="/">
+      <Link id="meetech" to="/">
         <h1 className="logo-private">meetech</h1>
       </Link>
       <div className="header-calendar">
@@ -66,7 +66,7 @@ export function CalendarPrivate() {
           Add events
         </Link>
       </div>
-      <article className="calendar">
+      <article>
         {state.events.length > 0 && (
           <EventsCalendar defaultEvents={state.events} />
         )}

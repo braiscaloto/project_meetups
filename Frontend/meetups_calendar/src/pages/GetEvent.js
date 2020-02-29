@@ -145,63 +145,72 @@ export function GetEvent() {
 
   return (
     <React.Fragment>
-      <Event
-        defaultEvent={state.event}
-        defaultAttendees={state.attendees}
-        defaultLikes={state.likes}
-        defaultComments={state.comments}
-      />
-      <button
-        className="btn-like"
-        onClick={() => {
-          handleCreateLike();
-        }}
-        onDoubleClick={() => {
-          handleDeleteLike(currentUser);
-        }}
-      >
-        ❤️ {state.likes}
-      </button>
-      <form onSubmit={handleSubmit(handleCreateComment)} noValidate>
-        <div
-          className={`form-control ${
-            errors.name ? "ko" : formState.touched.name && "ok"
-          }`}
-        >
-          <label>Comment</label>
-          <input
-            ref={register({
-              required: "The content is mandatory"
-            })}
-            id="comment"
-            name="comment"
-            type="text"
-            placeholder="Please enter your comment"
-          ></input>
-          {errors.title && (
-            <span className="errorMessage">{errors.title.message}</span>
-          )}
-        </div>
-
-        <div className="btn-container">
+      <main Id="only-event">
+        <article className="the-event">
+          <Event
+            defaultEvent={state.event}
+            defaultAttendees={state.attendees}
+            defaultLikes={state.likes}
+            defaultComments={state.comments}
+          />
+        </article>
+        <article className="the-like">
           <button
-            type="submit"
-            className="btn"
-            disabled={formState.isSubmitting}
+            className="btn-like"
+            onClick={() => {
+              handleCreateLike();
+            }}
+            onDoubleClick={() => {
+              handleDeleteLike(currentUser);
+            }}
           >
-            COMMENT
+            ❤️ {state.likes}
           </button>
-        </div>
-      </form>
+        </article>
+        <article className="the-commetn">
+          <form onSubmit={handleSubmit(handleCreateComment)} noValidate>
+            <div
+              className={`form-control ${
+                errors.name ? "ko" : formState.touched.name && "ok"
+              }`}
+            >
+              <label>Comment</label>
+              <input
+                ref={register({
+                  required: "The content is mandatory"
+                })}
+                id="comment"
+                name="comment"
+                type="text"
+                placeholder="Please enter your comment"
+              ></input>
+              {errors.title && (
+                <span className="errorMessage">{errors.title.message}</span>
+              )}
+            </div>
 
-      <button
-        className="btn"
-        onClick={() => {
-          handleCreateAttendee(currentUser);
-        }}
-      >
-        subscribe this event!!!
-      </button>
+            <div className="btn-container">
+              <button
+                type="submit"
+                className="btn"
+                disabled={formState.isSubmitting}
+              >
+                COMMENT
+              </button>
+            </div>
+          </form>
+        </article>
+        <article className="the-attendees">
+          <button
+            className="btn"
+            onClick={() => {
+              handleCreateAttendee(currentUser);
+            }}
+          >
+            subscribe this event!!!
+          </button>
+        </article>
+      </main>
     </React.Fragment>
   );
 }

@@ -54,7 +54,7 @@ export function Calendar() {
     <React.Fragment>
       <header>
         <article className="header-calendar1">
-          <Link to="/">
+          <Link id="meetech" to="/">
             <h1 className="logo-calendar">meetech</h1>
           </Link>
         </article>
@@ -68,7 +68,7 @@ export function Calendar() {
         </div>
       </header>
       <main>
-        <article className="calendar">
+        <article>
           {state.events.length > 0 && (
             <EventsCalendar defaultEvents={state.events} />
           )}
