@@ -42,7 +42,6 @@ async function getEvents(req, res, next) {
         ...acc,
         [rawEvent.id]: {
           ...rawEvent,
-          //tags: tag ? [...eventProcessed.tags, tag] : eventProcessed,
           tags: [...eventProcessed.tags, tag],
           tagId: undefined,
           tag: undefined
