@@ -8,7 +8,7 @@ export function Profile() {
   return (
     <React.Fragment>
       <main className='profile'>
-        <Link className='btn' to={`/`}>
+        <Link className='btn' to={`/calendar`}>
           GO CALENDAR
         </Link>
 
@@ -18,7 +18,7 @@ export function Profile() {
           Update Profile
         </Link>
         <div className='contactProfile'>
-          <p className='emailProfile'>Contact me: {user.email}</p>
+          <p className='emailProfile'>Email: {user.email}</p>
         </div>
 
         <Link className='btn' to='/'>
