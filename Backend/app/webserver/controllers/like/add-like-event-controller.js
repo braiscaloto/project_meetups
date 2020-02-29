@@ -14,11 +14,6 @@ async function validate(payload) {
       .guid({
         version: ["uuidv4"]
       })
-      .required(),
-    like: Joi.string()
-      .guid({
-        version: ["uuidv4"]
-      })
       .required()
   });
 
@@ -43,14 +38,12 @@ async function getEvent(eventId) {
 }
 
 async function addLikeToEvent(req, res, next) {
-  // /api/events/37664a0b-0811-4005-8a26-db41b93825a8/like
   const { eventId } = req.params;
   const { userId } = req.claims;
-  const likeData = { ...req.body };
+
   const payload = {
     eventId,
-    userId,
-    ...likeData
+    userId
   };
 
   try {
@@ -69,11 +62,10 @@ async function addLikeToEvent(req, res, next) {
 
     // Associate likes to the given event
     const sqlAddLikes = "INSERT INTO likes SET ?";
-    const likeId = likeData.like;
 
     const likeRow = {
       event_id: eventId,
-      user_id: likeId,
+      user_id: userId,
       created_at: new Date()
         .toISOString()
         .replace("T", " ")

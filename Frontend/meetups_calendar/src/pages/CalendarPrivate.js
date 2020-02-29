@@ -51,25 +51,26 @@ export function CalendarPrivate() {
 
   return (
     <React.Fragment>
-      <main>
-        <h1>meetech</h1>
-        <div className="header-calendar">
-          <Link className="btn" to={`/profile`}>
-            Profile
-          </Link>
-          <Link className="btn" to={`/home`}>
-            Events
-          </Link>
-          <Link className="btn" to={`/add-event`}>
-            Add events
-          </Link>
-        </div>
-        <article id="calendar-transition">
-          {state.events.length > 0 && (
-            <EventsCalendar defaultEvents={state.events} />
-          )}
-        </article>
-      </main>
+      {" "}
+      <Link to="/">
+        <h1 className="logo-private">meetech</h1>
+      </Link>
+      <div className="header-calendar">
+        <Link className="btn-private" to={`/profile`}>
+          Profile
+        </Link>
+        <Link className="btn-private" to={`/home`}>
+          Events
+        </Link>
+        <Link className="btn-private" to={`/add-event`}>
+          Add events
+        </Link>
+      </div>
+      <article className="calendar">
+        {state.events.length > 0 && (
+          <EventsCalendar defaultEvents={state.events} />
+        )}
+      </article>
     </React.Fragment>
   );
 }

@@ -9,11 +9,6 @@ async function validate(payload) {
       .guid({
         version: ["uuidv4"]
       })
-      .required(),
-    likeId: Joi.string()
-      .guid({
-        version: ["uuidv4"]
-      })
       .required()
   });
 
@@ -38,13 +33,12 @@ async function getEvent(eventId) {
 }
 
 async function deleteLikeFromEvent(req, res, next) {
-  // /api/events/37664a0b-0811-4005-8a26-db41b93825a8/tags
-  const { eventId, likeId } = req.params;
-  //const { userId } = req.claims;
+  const { eventId } = req.params;
+  const { userId } = req.claims;
 
   const payload = {
     eventId,
-    likeId
+    userId
   };
 
   try {
@@ -68,7 +62,7 @@ async function deleteLikeFromEvent(req, res, next) {
 
     const connection = await mysqlPool.getConnection();
     try {
-      await connection.execute(sqlDeleteLike, [eventId, likeId]);
+      await connection.execute(sqlDeleteLike, [eventId, userId]);
       connection.release();
     } catch (e) {
       console.error(e);

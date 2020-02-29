@@ -22,6 +22,7 @@ export function Event({
         <p id="content" className="content">
           {defaultEvent.content}
         </p>
+
         <article>
           <h2>Comments...</h2>
           <ul>

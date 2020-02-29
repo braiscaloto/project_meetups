@@ -14,6 +14,36 @@
   border: 2px solid;
 }
 
+.btn-private {
+  font-family: var(--font-primary);
+  transition: all 0.2s;
+  min-width: 120px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: transparent;
+  text-transform: uppercase;
+  color: var(--bright);
+  outline: none;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 30px;
+  border: 2px solid;
+  float: right;
+  margin-bottom: 20px;
+}
+
+.btn-like {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  background: transparent;
+  color: var(--bright);
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  margin: 10px;
+}
+
 .btn:hover {
   background: var(--bright);
   color: var(--secondary);
