@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
-@import "~@fullcalendar/core/main.css";
-@import "~@fullcalendar/daygrid/main.css";
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
 .fc-unthemed td.fc-today {
   opacity: 0.1 !important;
 }
@@ -11,24 +11,17 @@
   border-radius: 30px !important;
   border: 1px solid var(--primary) !important;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 .header {
   display: flex;
   flex-direction: row-reverse;
   padding: 0.5rem;
   background-color: #1abc9c;
   color: #fff;
-=======
+}
 .fc {
   direction: ltr !important;
   text-align: center !important;
->>>>>>> afcc966e89f96aaf76c15574f161c7d059f2e33d
-=======
-.fc {
-  direction: ltr !important;
-  text-align: center !important;
->>>>>>> f6921e50874263e61bd85b29778d0deaa7ddec99
 }
 .fc-button-primary:disabled {
   background-color: transparent !important;
