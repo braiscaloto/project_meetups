@@ -89,6 +89,28 @@ export function Register() {
             <span className='errorMessage'>{errors.password.message}</span>
           )}
         </div>
+        <div
+          className={`form-control ${
+            errors.password ? 'ko' : formState.touched.password && 'ok'
+          }`}
+        >
+          <label>Confirm your password</label>
+          <input
+            ref={register({
+              required: 'The password is mandatory',
+              minLength: {
+                message: 'Password length should be greater than 6',
+                value: 6
+              }
+            })}
+            name='password'
+            type='password'
+            placeholder='Please confirm your password'
+          ></input>
+          {errors.password && (
+            <span className='errorMessage'>{errors.password.message}</span>
+          )}
+        </div>
         <div className='btn-container'>
           <button
             type='submit'
@@ -98,7 +120,9 @@ export function Register() {
             Register
           </button>
           <div className='m-t-lg'>
-            <Link to='/login'>Already have an account, please sign in</Link>
+            <Link className='m-t-lg' to='/login'>
+              Already have an account
+            </Link>
           </div>
         </div>
       </form>

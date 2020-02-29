@@ -13,7 +13,12 @@
   border-radius: 30px;
   border: 2px solid;
 }
-
+.btn-header {
+  border: none;
+  font-size: 1rem;
+  color: white;
+  padding: 1rem;
+}
 .btn:hover {
   background: var(--bright);
   color: var(--secondary);

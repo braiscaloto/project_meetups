@@ -33,7 +33,9 @@ export function AvatarContainer({ id }) {
         )}
       </div>
       <div className='avatarContainer'>
-        {<img className='avatarProfile' src={profile.avatar_url} />}
+        {profile.avatar_url !== null && (
+          <img className='avatarProfile' src={profile.avatar_url} />
+        )}
       </div>
     </div>
   );

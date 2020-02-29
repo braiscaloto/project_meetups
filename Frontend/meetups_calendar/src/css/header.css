@@ -1,37 +1,10 @@
-.header {
-  display: flex;
-  align-items: center;
-  padding: var(--space-md);
+.headerEvents {
+  padding: 1rem;
 }
 
-.header h1 {
-  font-family: var(--font-special);
-  font-size: var(--font-l);
-}
+.headerAvatar {
+  border-radius: 3rem;
 
-.header-item {
-  flex-grow: 1;
-}
-
-.header-item.centered {
-  text-align: center;
-}
-
-.header-item.right {
-  text-align: right;
-}
-
-.header-tag {
-  font-family: var(--font-secondary);
-  font-size: var(--font-m);
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.header-name {
-  font-size: var(--font-s);
-}
-
-#tags-toggle {
-  border-bottom: none;
+  max-height: 50px;
+  max-width: 50px;
 }
