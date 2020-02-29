@@ -7,9 +7,12 @@ async function getAttendees(req, res, next) {
 
   try {
     const connection = await mysqlPool.getConnection();
-    const sqlQuery = `SELECT *
-      FROM attendees
-      WHERE event_id = ?`;
+    const sqlQuery = `SELECT name, avatar_url
+      FROM users 
+      JOIN attendees
+      ON users.id=attendees.user_id
+      WHERE event_id=?
+      ORDER BY users.created_at`;
     const [rows] = await connection.execute(sqlQuery, [eventId]);
     connection.release();
 

@@ -23,14 +23,25 @@ export function Event({
           {defaultEvent.content}
         </p>
 
-        <h2>Comments...</h2>
-        {defaultComments.map(comment => {
-          return (
-            <li key={comment.id}>
-              <p id="content">{comment.comment}</p>
-            </li>
-          );
-        })}
+        <article>
+          <h2>Comments...</h2>
+          <ul>
+            {defaultComments.map(comment => (
+              <li key={comment.comment}>
+                <p id="content">{comment.comment}</p>
+              </li>
+            ))}
+          </ul>
+        </article>
+        <article>
+          <ul>
+            {defaultAttendees.map(attendee => (
+              <li key={attendee.id}>
+                <h3 id="content">{attendee.name}</h3>
+              </li>
+            ))}
+          </ul>
+        </article>
       </div>
     </main>
   );
