@@ -13,7 +13,7 @@ router.get("/likes/:eventId/likes", checkAccountSession, getLikes);
 router.get("/likes/:eventId", checkAccountSession, getLike);
 router.post("/events/:eventId/likes", checkAccountSession, addLikeToEvent);
 router.delete(
-  "/events/:eventId/likes/:likeId",
+  "/events/:eventId/likes",
   checkAccountSession,
   deleteLikeFromEvent
 );
