@@ -8,9 +8,7 @@ export function EventList({
   onSelectDate
 }) {
   console.log(onSelectDate);
-  function refreshPage() {
-    window.location.reload(false);
-  }
+
   return (
     <div className="opacity-container ">
       <ul className="m-t-lg">

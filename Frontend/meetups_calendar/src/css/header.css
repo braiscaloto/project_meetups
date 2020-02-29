@@ -8,3 +8,21 @@
   max-height: 50px;
   max-width: 50px;
 }
+<<<<<<< HEAD
+=======
+
+.header-tag {
+  font-family: var(--font-secondary);
+  font-size: var(--font-m);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.header-name {
+  font-size: var(--font-s);
+}
+
+#tags-toggle {
+  border-bottom: none;
+}
+>>>>>>> afcc966e89f96aaf76c15574f161c7d059f2e33d
