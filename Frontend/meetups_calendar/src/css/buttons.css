@@ -44,6 +44,13 @@
   margin: 10px;
 }
 
+.btn-header {
+  border: none;
+  font-size: 1rem;
+  color: white;
+  padding: 1rem;
+}
+
 .btn:hover {
   background: var(--bright);
   color: var(--secondary);

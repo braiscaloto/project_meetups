@@ -1,3 +1,13 @@
+.headerEvents {
+  padding: 1rem;
+}
+
+.headerAvatar {
+  border-radius: 3rem;
+
+  max-height: 50px;
+  max-width: 50px;
+}
 .header {
   display: flex;
   align-items: center;
@@ -35,3 +45,4 @@
 #tags-toggle {
   border-bottom: none;
 }
+

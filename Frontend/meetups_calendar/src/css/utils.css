@@ -22,6 +22,7 @@
 .m-t-lg {
   margin-top: var(--space-lg);
   color: var(--bright);
+  border-color: var(--bright);
 }
 
 .flex {

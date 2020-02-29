@@ -1,23 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
 @import "~@fullcalendar/core/main.css";
 @import "~@fullcalendar/daygrid/main.css";
-.calendar-parent {
-  width: 100% !important;
-  height: 100vh !important;
-}
-.fc-view-container {
-  position: relative;
-  width: 100% !important;
-}
-.fc table {
-  width: 100%;
-  box-sizing: border-box;
-  table-layout: fixed;
-  border-collapse: collapse;
-  border-spacing: 0;
-  font-size: 1em;
-}
-
 .fc-unthemed td.fc-today {
   opacity: 0.1 !important;
 }
